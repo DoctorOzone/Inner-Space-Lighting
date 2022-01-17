@@ -39,6 +39,7 @@ $ pip3 install pyserial
 
 $ sudo mkdir /media/usb
 
+
 Note: do NOT run 'sudo apt upgrade', this will break the lights.
 
 Now we must edit the rc.local file, which contains commands run at startup. In the terminal, run 'sudo nano /etc/rc.local'. Insert the following lines after the blue text:
@@ -68,6 +69,7 @@ To create a design, make a text or csv file with the columns X,Y,Z,IsNode. The X
 
 Open SimShape.py and configure the settings:
 
+
 light_config_file = 'pegboard.txt' #enter the design file you just made
 
 output_filename = 'pegboard_sim.txt' #name of output file for simulation
@@ -76,9 +78,11 @@ WM_ll = 1.9 #minimum distance, in the spatial units you used, between *neighbori
 
 WM_ul = 2.3 #maximum distance, in the spatial units you used, between *neighboring* nodes
 
+
 It is recommended to run this script on your local machine, as running it on the Raspberry Pi will take a very long time to complete.
 
 When the script completes, open WSlights_v5c.py and configure the settings:
+
 
 detectlights = 200 #How many LEDs are detectable. Should be a multiple of 50, even if not all lights will be used.
 
@@ -93,5 +97,6 @@ WM_ll = 1.9 #minimum distance, in the spatial units you used, between *neighbori
 WM_ul = 2.3 #maximum distance, in the spatial units you used, between *neighboring* nodes
 
 Csamp_scale = 10 #Number of samples the script will draw when Z/e = 1. Roughly speaking, higher numbers will require you to do less "work" to achieve an aesthetic output.
+
 
 That's it! Enjoy
