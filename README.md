@@ -24,12 +24,19 @@ Flash the micro SD card with the 2020-05-28 version of Raspberry Pi OS: https://
 Connect your Raspberry Pi to a screen and keyboard, open the terminal and run the following commands:
 
 $ git clone https://github.com/DoctorOzone/Inner-Space-Lighting/
+
 $ wget https://ubld.it/wp-content/uploads/2014/02/TrueRNG-Linux-udev-rules.tar.gz
+
 $ sudo tar -zxvf TrueRNG-Linux-udev-rules.tar.gz -C /etc/udev/rules.d/
+
 $ sudo pip3 install board
+
 $ sudo pip3 install rpi_ws281x adafruit-circuitpython-neopixel
+
 $ pip3 install serial
+
 $ pip3 install pyserial
+
 $ sudo mkdir /media/usb
 
 Note: do NOT run 'sudo apt upgrade', this will break the lights.
