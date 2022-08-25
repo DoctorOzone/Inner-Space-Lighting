@@ -72,10 +72,15 @@ $ nano MyApp.desktop
 Add the following content:
 
 [Desktop Entry]
+
 Name=Your Application Name
+
 Type=Application
+
 Comment=Some Comments about your program
+
 Exec=sudo python3 /home/pi/WSlights_v10.py
+
 
 Save and exit, then:
 
