@@ -48,12 +48,38 @@ $ sudo apt-get install python3-scipy
 
 Note: do NOT run 'sudo apt upgrade', this will break the lights.
 
-Now we must edit the rc.local file, which contains commands run at startup. In the terminal, run 'sudo nano /etc/rc.local'. Insert the following lines after the blue text:
+Version 5 and USB autostart:
+
+Edit the rc.local file, which contains commands run at startup. In the terminal, run 'sudo nano /etc/rc.local'. Insert the following lines after the blue text:
 
 sudo mount /dev/sda1 /media/usb/
 sudo python3 /home/pi/WSlights_v5c.py &
 
 Save changes to this file and shut down the Raspberry Pi.
+
+Version 10 autostart:
+
+Remove the python execution line from the rc.local file, if present. From the home directory:
+
+$ cd .config
+
+$ mkdir autostart
+
+$ cd autostart
+
+$ nano MyApp.desktop
+
+Add the following content:
+
+[Desktop Entry]
+Name=Your Application Name
+Type=Application
+Comment=Some Comments about your program
+Exec=sudo python3 /home/pi/WSlights_v10.py
+
+Save and exit, then:
+
+$ sudo chmod +x MyApp.desktop
 
 ## Build
 
