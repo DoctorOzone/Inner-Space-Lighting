@@ -39,6 +39,12 @@ $ pip3 install pyserial
 
 $ sudo mkdir /media/usb
 
+If using version 10:
+
+$ pip3 install scipy
+
+$ sudo apt-get install python3-scipy
+
 
 Note: do NOT run 'sudo apt upgrade', this will break the lights.
 
